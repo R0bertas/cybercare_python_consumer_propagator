@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "event_services"
+version = "0.1.0"
+description = "Two small services: event propagator and event consumer"
+authors = ["Robertas"]
+packages = [{include = "consumer"}, {include = "propagator"}, {include = "utils"}]
+
+[tool.poetry.scripts]
+event-consumer = "consumer.main:main"
+event-propagator = "propagator.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.95.2"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+httpx = "^0.24.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+pytest-asyncio = "^0.21"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,13 @@
+{
+  "propagator": {
+    "url": "http://127.0.0.1:8000/event",
+    "interval": 2,
+    "events_file_path": "events.json"
+  },
+  "consumer": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "db_type": "sqlite",
+    "db_path": "events.db"
+  }
+}
