@@ -7,13 +7,13 @@ Two small Python services:
 
 ## Configuration
 
-Both services read from `config.json` by default. CLI arguments override config file values.
+Reads from `config.json` by default
 
 
 ## Quick Start
 
 1. Install Poetry: https://python-poetry.org/docs/
-2. From the `event_services` folder:
+2. In main folder:
 
 ```bash
 poetry install
